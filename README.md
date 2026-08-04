@@ -1,16 +1,44 @@
-# React + Vite
+# Tradescape — Trader Risk Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## How to run the project
 
-Currently, two official plugins are available:
+1. Clone this repository.
+2. Install dependencies with `npm install`.
+3. Start the app with `npm run dev`.
+4. Open the local address shown in your browser.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## What this project is
 
-## React Compiler
+This is a React dashboard that shows a trader’s account status, risk numbers, and trade performance.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- It updates numbers from the `TRADES` data.
+- It shows balance, drawdown, win rate, and other key metrics.
+- The layout works on different screen sizes.
 
-## Expanding the ESLint configuration
+## Equity Curve
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+There is a line chart that shows how the account balance changes after each trade.
+
+- It helps see winning and losing streaks.
+- It shows how the account grew or fell over time.
+
+---
+
+## Simple explanations
+
+### What is drawdown?
+
+Drawdown is the biggest drop in account value from a high point to a later low point.
+
+### Why is remaining drawdown useful?
+
+Remaining drawdown shows how much loss room is left before a risk limit is reached.
+
+It is more helpful than just looking at profit/loss because it focuses on risk and staying inside limits.
+
+### What could be improved?
+
+- Add filters for day, week, or month views.
+- Add a live simulation button for testing new trades.
+- Show risk for different assets separately.
+- Allow exporting a summary report.
